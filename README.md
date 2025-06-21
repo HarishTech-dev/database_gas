@@ -1,17 +1,15 @@
 
 
-🌱 ESP32 Soil Moisture Monitoring System using Python & XAMPP
+ ESP32 Gas Monitoring System using Python & XAMPP
 
 🔍 Overview
 
-This project implements a real-time **IoT-based soil moisture monitoring system** using the **ESP32 microcontroller** and a **soil moisture sensor**. The ESP32 reads analog moisture levels from the sensor and sends the data over Wi-Fi to a **Python script** running on a local server. The script stores this data in a **MySQL database** managed via **XAMPP**. This project is ideal for **smart irrigation**, **agriculture**, and **plant care** solutions.
-
+This project implements a real-time **IoT-based Gas Monitoring system** using the **ESP32 microcontroller** and a **soil moisture sensor**. The ESP32 reads analog moisture levels from the sensor and sends the data over Wi-Fi to a **Python script** running on a local server. The script stores this data in a **MySQL database** managed via **XAMPP**.
 
 
 🛠️ Features
 
 * 📶 Wi-Fi enabled data transmission using ESP32
-* 🌱 Real-time soil moisture measurement
 * 🐍 Python server to receive and log data
 * 💾 Data stored in MySQL database via XAMPP
 * 📈 Extendable for dashboards, alerts, or IoT platforms
@@ -21,7 +19,7 @@ This project implements a real-time **IoT-based soil moisture monitoring system*
 ⚙️ Hardware Components
 
 * 🧠 **ESP32 Wi-Fi Module**
-* 💧 **Soil Moisture Sensor (Analog Type)**
+*  Gas Sensor **
 * 🧪 Jumper wires & Breadboard
 * 🔋 USB Cable for ESP32 power
 
@@ -39,7 +37,7 @@ This project implements a real-time **IoT-based soil moisture monitoring system*
 
  🔧 How It Works
 
-1. **ESP32 + Soil Sensor:**
+1. **ESP32 + Gas Sensor:**
 
    * ESP32 reads analog voltage from the soil sensor.
    * Moisture data is sent via HTTP POST to a Python Flask server.
@@ -61,7 +59,7 @@ This project implements a real-time **IoT-based soil moisture monitoring system*
  1. 🛠 Hardware Setup
 
 ```
-Soil Moisture Sensor Pin  -> ESP32 Pin
+Gas Moisture Sensor Pin  -> ESP32 Pin
 -------------------------    ----------
 VCC                        -> 3.3V
 GND                        -> GND
@@ -75,7 +73,6 @@ Analog Output (A0)         -> GPIO 34 (or any ADC pin)
  2. 💡 Arduino IDE Setup
 
 * Install **ESP32 Board Manager**
-* Upload code from `/ESP32_Code/soil_moisture.ino`
 * Set Wi-Fi SSID and password inside the sketch
 * Code will read moisture level (0–4095) and send via HTTP POST
 
@@ -102,7 +99,7 @@ python server.py
 
 * Start Apache and MySQL services in XAMPP Control Panel
 * Open phpMyAdmin or HeidiSQL
-* Create database `agro_monitoring`
+* Create database `gas_monitoring`
 * Create table `soil_data`:
 
 ```sql
@@ -125,12 +122,7 @@ CREATE TABLE soil_data (
 
 
 
-## 🚀 Future Scope
 
-* Automate water pump control when moisture drops
-* Add DHT11 for humidity + temperature monitoring
-* Display real-time values on a web dashboard
-* Integrate with Blynk, Node-RED, or Google Firebase
 
 
 
